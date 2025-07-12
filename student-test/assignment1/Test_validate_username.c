@@ -21,4 +21,5 @@ void test_validate_my_username()
     const char *myUsrName = my_username();
     char *myConfUsrName = malloc_username_from_conf_file();
     TEST_ASSERT_EQUAL_STRING_MESSAGE(myUsrName, myConfUsrName, "username differs from conf username");
+    free(myConfUsrName);
 }
